@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+
+:root{
+    --pri-color:#1EBABA;
+    --light-color:#fff;
+    --blue--color:#1DAFDD;
+    --black-color:#000;
+    --box-shadow:0px 25px 50px rgba(97, 217, 255, 0.1);
+    --gray: #949494;
+    
+}
+/* base */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s ease-out;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+body{
+     font-family: "Roboto", sans-serif;
+     overflow-x: hidden;
+
+}
+
+section{
+    padding:1rem 9%;
+    
+
+}
+.sec{
+    margin:150px 0!important;
+
+}
+.heading{
+
+    text-align: center;
+    padding: 10px 50px;
+}
+.heading p{
+    color:var(--gray) ;
+    /* text-align: center; */
+
+}
+.heading h1{
+    font-size: 40px;
+    color: var(--black-color);
+    /* text-align: center; */
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--pri-color);
+}
+a:hover{
+    text-decoration: none;
+    color: var(--pri-color);
+     
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  
+}
+p{
+    font-family: "Roboto",sans-serif;
+    font-size: 16px;
+    color: var(--gray);
+    font-weight: 400;
+
+}
+/* resuable button */
+.button1{
+    width:150px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: var(--light-color);
+    color: var(--pri-color);
+    font-size: 16px;
+}
+
+.button2{
+    width:150px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: var(--pri-color);
+    color: var(--light-color);
+    border: 2px solid #fff;
+    font-size: 16px;
+}
+/* ends */
+
+.signnbutton{
+  width:100px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--pri-color);
+  color: var(--light-color);
+  font-size: 16px;
+  
+}
+.btn1{
+    background-color: var(--light-color);
+    color: var(--black-color);
+}
+.btn1:hover{
+    background-color: var(--pri-color);
+}
+.btn2:hover{
+    background-color: var(--light-color);
+    color: var(--pri-color);
+}
+
+
+
+/* navbar */
+
+.navSEC{
+    padding:2rem 9%;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    right: 0;
+    z-index: 1000;
+    box-shadow:var(--box-shadow);
+    background-color: var(--light-color);
+    transition:.4s;
+    
+}
+.nav-text{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-text a{
+  margin-right: 20px;
+}
+
+
+#navToggle{
+    display: none;
+}
+.nav-text a.active{
+    color: #000;
+}
+/* nanbar media query */
+@media (max-width:768px) {
+   
+    #navToggle{
+        display:inline-block;
+    }
+
+  .nav-text {
+        position: absolute;
+        /* top: 100%; */
+        left: 0;
+        right: 0;
+        background-color: #fff; 
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        clip-path:polygon(0 0, 100% 0, 100% 0, 0 0);
+        width: 100%;
+
+    }
+    .nav-text a{
+        width: 100%;
+        padding: 1rem;
+        border-top: .1rem solid rgba(0, 0, 0, .2)!important;
+        border-bottom: .1rem solid rgba(0, 0, 0, .2)!important;
+    }
+   
+
+    .nav-text.active{
+        clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    
+}
+/* ends */
+
+/* home hero */
+.hero{
+    background-color: var(--pri-color);
+    min-height: 600px;
+    padding-bottom: 0!important;
+    padding-top: 0!important;
+    border-radius: 0px 0px 50px 50px;
+}
+.hero-text {
+    margin: auto;
+    padding: 0;
+}
+.hero-text h1{
+  color: var(--light-color);
+  line-height: 75px;
+  font-size: 50px;
+}
+.hero-text p{
+    line-height: 24px;
+}
+.transperent-box{
+ height:600px;
+ background: rgba(26, 157, 157, 0.37);
+ padding: 100px 0;
+
+}
+
+.hero-img{
+    width: 300px;
+    height: 400px;
+    background-color: var(--light-color);
+    border-radius: 15px;
+    margin: auto;
+    position: relative;
+ 
+}
+
+.small-div{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: var(--light-color);
+    position: absolute;
+    right: -50px;
+    top: 50px;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: var(--box-shadow);
+}
+/* ends */
+
+/* partners */
+.partners{
+    margin:50px 0 50px 0;
+}
+.p-box{
+    width: 50%;
+}
+
+.chart-img{
+    /* width: 100%; */
+   width: 500px;
+    height: 200px;
+    background-color: var(--light-color);
+    border-radius: 10px;
+    box-shadow: 0px 25px 100px rgba(21, 147, 147, 0.1);
+
+}
+
+
+/* ends */
+
+/* Whatwedo */
+
+.swiper-slide{
+    margin-right: 10px;
+}
+.swiper-slide .swip-svg{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 50px;
+    
+}
+.swiper-slide h3{
+    line-height: 50px;
+}
+
+
+/* ends */
+
+/* start booking */
+
+.booking-card{
+    width: 100%;
+    min-height: 300px;
+    background-color: #61D9FF ;
+    padding: 10px 30px 10px 30px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.circle-img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* ends */
+
+/* vieo section */
+
+.video1{
+    width: 100%;
+    height: 500px;
+    background-color: royalblue;
+    padding: 0;
+}
+
+.videoimg2{
+    width: 100%;
+    max-width: 550px;
+    height: 250px;
+    margin-bottom: 10px;
+    background-color: salmon;
+}
+.v-imges{
+    display: flex;
+   justify-content: space-between;
+}
+.videoimg{
+width: 250px;
+height: 243px;
+background-color: saddlebrown;
+}
+.video-text h3{
+  line-height: 60px;
+ 
+}
+
+.video-text button{
+    background-color: var(--blue--color)!important;
+
+}
+/* ends */
+
+
+/* covid analyes section */
+.c-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+.covid-box{
+    background-color: var(--blue--color);
+    width: 300px;
+    height: 400px;
+    padding: 30px;
+    margin-right: 50px;
+    position: relative;
+
+}
+.covid-text{
+    text-align: center;
+    padding: 20px;
+
+}
+.covid-box h3{
+    color: var(--light-color)!important;
+}
+.c-img{
+    width: 300px;
+    height: 400px;
+    background-color: var(--light-color);
+    padding: 20px ;
+
+}
+
+.playbtn{
+    position: absolute;
+   right: -30px;
+  bottom: 150px;
+}
+.small-box{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: var(--light-color);
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px 25px 50px rgba(97, 217, 255, 0.1);
+   
+}
+
+.small-box  p{
+    font-size: 10px;
+    color: var(--gray);
+}
+.small-box h6{
+    font-size: 24px!important;
+    color: var(--black-color);
+}
+
+.spacing{
+    margin-top: 40px!important;
+}
+
+/* ends */
+
+/* help line */
+.help-img{
+    width: 50%;
+    max-height: 500px;
+    background-color: var(--light-color);
+    padding: 20px;
+}
+.help-text{
+    margin: auto;
+    padding: 0 20px;
+}
+.help-text h3{
+    line-height: 50px;
+
+}
+
+.help-text button{
+    background-color: var(--blue--color);
+}
+/* ends */
+
+/* patient testimony */
+
+.client-T-box{
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+
+ 
+}
+.client-T-box h3{
+    font-size: 30px;
+}
+.first-t{
+    flex: 1;
+    padding: 0 20px;
+}
+
+.second-t{
+    width: 50%;
+}
+.patient-box{
+    display: flex;
+    justify-content:center;
+    margin: auto;
+   
+  
+}
+.client-testimony{
+    width: 50%;
+    margin: auto;
+    
+}
+.client-testimony span{
+    cursor: pointer;
+}
+
+.patient-img{
+  width: 50%;
+  height: 500px;
+
+   
+}
+/* .tesimonia-D{
+    background-color: var(--blue--color);
+    transform: rotate(29.94deg);
+    height: 160px;
+    width: 150px;
+    border-radius: 20px;
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    z-index: -1;
+} */
+
+.form input{
+  width: 250px;
+  height: 40px;
+  border: 1px solid #000;
+  padding: 10px;
+}
+.form  button{
+    background-color: var(--blue--color);
+}
+.quote h3{
+    font-size: 20px;
+}
+/* ends */
+
+/* footer section */
+.footer{
+    background-color: var(--pri-color);
+}
+.footer-B{
+   padding: 20px;
+}
+.footer-B p{
+    color: var(--light-color);
+}
+.footer-B h3{
+    color: var(--light-color);
+    line-height: 100px;
+
+}
+.socail-link a{
+    color: var(--light-color)!important;
+}
+hr{
+    color: var(--light-color);
+}
+/* ends */
+
+/* ====MEDIA QUERY */
+@media (max-width: 450px) {
+    .heading{
+        padding: 0;
+    }
+   /* hero */
+   .hero-tex{
+       width: 100%;
+       margin-bottom: 25px;
+   }
+   .hero-text .btn-box{
+      display: flex;
+      justify-content: space-between;
+   }
+   .hero-img{
+       width: 100%;
+   }
+   section{
+       padding: 2rem;
+   }
+   /* partners */
+   .p-box{
+       width: 100%;
+       /* padding: 0 20px; */
+   }
+   .partners-svgs {
+       display: flex;
+       justify-content: space-between;
+       width: 100%;
+   }
+   .partners-svgs svg{
+       width: 50px!important;
+     
+      
+   }
+   .chart-img{
+       width: 100%;
+       margin-top: 20px;
+   }
+   /* help line */
+   .help-img{
+       width: 100%;
+       padding: 0;
+       margin: auto;
+   }
+   .client-T-box .first-t{
+    width: 100%;
+    padding: 0;
+ }
+  .client-T-box .second-t{
+      width: 100%;
+   
+  }
+   /* testimony */
+   .patient-img {
+       /* width: 100%; */
+       max-width: 400px;
+       height: 400px;
+   }
+   .client-testimony{
+       width: 100%;
+   
+   }
+   
+  }
+  
+  @media (width: 540px) {
+   
+   
+  }
+  @media (width: 280px) {
+  
+  }
+  
+  @media (max-width: 768px) {
+  /* partners */
+  .p-box{
+      margin-bottom: 20px;
+  }
+  .partners-svgs {
+    display: flex;
+    justify-content: space-between;
+    
+    
+ }
+ .partners-svgs svg{
+     margin-right: 20px;
+ }
+ 
+  }
+  
+  @media (max-width: 1200px) {
+  
+   
+  }
+  
+  @media (width: 1280px) {
+   
+  }
+  
