@@ -28,7 +28,7 @@ html{
     overflow-x: hidden;
     scroll-padding-top: 7rem;
     scroll-padding-top: 7rem;
-    scroll-behavior: smooth;
+   
 }
 body{
      font-family: "Roboto", sans-serif;
@@ -321,6 +321,8 @@ hr{
 @media (max-width: 450px) {
     .heading{
         padding: 0;
+        justify-content: flex-start;
+        border-block-width: ;
     
     }
  
@@ -336,17 +338,10 @@ hr{
    .S-hero-img {
        display: none;
    }
+}
    
     
-   }
-   
-   @media (width: 540px) {
-    
-    
-   }
-   @media (width: 280px) {
-   
-   }
+ 
    
    @media (max-width: 768px) {
        /* service hero */
@@ -363,14 +358,5 @@ hr{
          margin-bottom: 20px!important;
      }
    
-   }
-   
-   @media (max-width: 1200px) {
-   
-    
-   }
-   
-   @media (width: 1280px) {
-    
-   }
+    }
    
